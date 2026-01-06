@@ -1,0 +1,1 @@
+console.log('STATIO app loaded');

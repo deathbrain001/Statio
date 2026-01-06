@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>STATIO | Labs · Stats · Discover</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="src/styles/main.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/logo.png">
+    <span>STATIO</span>
+  </div>
+  <button onclick="logout()" class="logout">Logout</button>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <label>University</label>
+    <select id="university"></select>
+
+    <label>Section</label>
+    <select id="section">
+      <option>Objective</option>
+      <option>Methodology</option>
+      <option>Result</option>
+      <option>Conclusion</option>
+    </select>
+
+    <label>Font</label>
+    <select id="font">
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Georgia">Georgia</option>
+      <option value="Arial">Arial</option>
+    </select>
+
+    <button class="primary" onclick="saveDoc()">Save</button>
+    <button onclick="exportPDF()">Export PDF</button>
+    <button onclick="exportWord()">Export Word</button>
+  </aside>
+
+  <main class="editor">
+    <textarea id="editor" placeholder="Write your academic report here..."></textarea>
+    <div id="alerts"></div>
+  </main>
+
+  <aside class="preview">
+    <h4>Live Preview</h4>
+    <div id="previewBox"></div>
+  </aside>
+</div>
+
+<script type="module" src="src/logic/firebase.js"></script>
+<script src="src/logic/app.js"></script>
+</body>
+</html>

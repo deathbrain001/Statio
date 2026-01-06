@@ -1,0 +1,1 @@
+console.log('Paste Firebase config here');
